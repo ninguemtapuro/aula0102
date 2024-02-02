@@ -183,26 +183,35 @@ public class Conversor extends javax.swing.JFrame {
     private void bntConverterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntConverterActionPerformed
         // TODO add your handling code here:
          //Declaração de variaveis
-        int c, f, total;
+        double c, f;
         //Entradas
+        
         try{
-            c = Integer.parseInt(txtNum1.getText());
-            f = Integer.parseInt(txtNum1.getText());
+            if(rbtCelcos.isSelected()){
+                //Entrada
+                c = Integer.parseInt(txtNum1.getText());
             
              //Processamento
-            if (rbtCelcos.isSelected()) {
+            
                
-                f = 9 * c / 5 + 32;
+                f = c * 9 / 5 + 32;
             
-            }   else if (rbtFar.isSelected())  {
             
-                c = f - 32/9 *5;
-        }
+       
             //Saida
-            lblResultado.setText(String.valueOf(c));
-        }catch  (NumberFormatException  e){
-            JOptionPane.showMessageDialog(null,"Erro" + e.getMessage(),"Atenção!", JOptionPane.ERROR_MESSAGE);}
+            lblResultado.setText(String.valueOf(f));
             
+             }else{
+                 f = Integer.parseInt(txtNum1.getText());
+                c = ( f - 32) * 5 / 9;
+                lblResultado.setText(String.valueOf(c));
+            }
+        
+           
+         }catch(NumberFormatException e) {
+            JOptionPane.showMessageDialog(null , "Erro:" + e.getMessage(), "Presta atenção, mano!!" , JOptionPane.ERROR_MESSAGE);                    
+        
+         }
         
     }//GEN-LAST:event_bntConverterActionPerformed
 
