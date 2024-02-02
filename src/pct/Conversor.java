@@ -5,6 +5,8 @@
  */
 package pct;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author DEV_2ano_2024
@@ -27,103 +29,113 @@ public class Conversor extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        pnlConversor = new javax.swing.JPanel();
+        lblTemperatura = new javax.swing.JLabel();
+        txtNum1 = new javax.swing.JTextField();
+        bntConverter = new javax.swing.JButton();
+        bntLimpar = new javax.swing.JButton();
+        lblResultado = new javax.swing.JLabel();
+        pnlOpções = new javax.swing.JPanel();
+        rbtCelcos = new javax.swing.JRadioButton();
+        rbtFar = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Temperatura °C:");
+        lblTemperatura.setText("Temperatura °C:");
 
-        jTextField2.setForeground(new java.awt.Color(255, 0, 51));
-        jTextField2.setText("RESULTADO");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        bntConverter.setText("Conversor");
+        bntConverter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                bntConverterActionPerformed(evt);
             }
         });
 
-        jButton1.setText("Conversor");
+        bntLimpar.setText("Limpar");
+        bntLimpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bntLimparActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("Limpar");
+        lblResultado.setForeground(new java.awt.Color(255, 0, 0));
+        lblResultado.setText("RESULTADO");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnlConversorLayout = new javax.swing.GroupLayout(pnlConversor);
+        pnlConversor.setLayout(pnlConversorLayout);
+        pnlConversorLayout.setHorizontalGroup(
+            pnlConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlConversorLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton1)
-                    .addComponent(jLabel1))
+                .addGroup(pnlConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(bntConverter)
+                    .addComponent(lblTemperatura))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 113, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(pnlConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlConversorLayout.createSequentialGroup()
+                        .addComponent(txtNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(24, 24, 24))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton2)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlConversorLayout.createSequentialGroup()
+                        .addComponent(bntLimpar)
                         .addGap(47, 47, 47))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(129, 129, 129))
+            .addGroup(pnlConversorLayout.createSequentialGroup()
+                .addGap(136, 136, 136)
+                .addComponent(lblResultado)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        pnlConversorLayout.setVerticalGroup(
+            pnlConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlConversorLayout.createSequentialGroup()
                 .addGap(38, 38, 38)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(42, 42, 42)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                .addGroup(pnlConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblTemperatura)
+                    .addComponent(txtNum1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblResultado)
+                .addGap(50, 50, 50)
+                .addGroup(pnlConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(bntConverter)
+                    .addComponent(bntLimpar))
                 .addGap(62, 62, 62))
         );
 
-        jRadioButton1.setText("°C --> °F");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        pnlOpções.setBorder(javax.swing.BorderFactory.createTitledBorder("Opções"));
+
+        buttonGroup1.add(rbtCelcos);
+        rbtCelcos.setText("°C --> °F");
+        rbtCelcos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                rbtCelcosActionPerformed(evt);
             }
         });
 
-        jRadioButton2.setSelected(true);
-        jRadioButton2.setText("°F --> °C");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(rbtFar);
+        rbtFar.setSelected(true);
+        rbtFar.setText("°F --> °C");
+        rbtFar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
+                rbtFarActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnlOpçõesLayout = new javax.swing.GroupLayout(pnlOpções);
+        pnlOpções.setLayout(pnlOpçõesLayout);
+        pnlOpçõesLayout.setHorizontalGroup(
+            pnlOpçõesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlOpçõesLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton1))
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addGroup(pnlOpçõesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(rbtFar)
+                    .addComponent(rbtCelcos))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        pnlOpçõesLayout.setVerticalGroup(
+            pnlOpçõesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlOpçõesLayout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addComponent(jRadioButton1)
+                .addComponent(rbtCelcos)
                 .addGap(41, 41, 41)
-                .addComponent(jRadioButton2)
+                .addComponent(rbtFar)
                 .addContainerGap(82, Short.MAX_VALUE))
         );
 
@@ -133,37 +145,66 @@ public class Conversor extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnlConversor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(pnlOpções, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(8, 8, 8)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(pnlConversor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(pnlOpções, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void rbtCelcosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtCelcosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_rbtCelcosActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void rbtFarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtFarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_rbtFarActionPerformed
 
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+    private void bntLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntLimparActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
+         txtNum1.setText(null);
+        lblResultado.setText(null);
+        txtNum1.requestFocus();
+    }//GEN-LAST:event_bntLimparActionPerformed
+
+    private void bntConverterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntConverterActionPerformed
+        // TODO add your handling code here:
+         //Declaração de variaveis
+        int c, f, total;
+        //Entradas
+        try{
+            c = Integer.parseInt(txtNum1.getText());
+            f = Integer.parseInt(txtNum1.getText());
+            
+             //Processamento
+            if (rbtCelcos.isSelected()) {
+               
+                f = 9 * c / 5 + 32;
+            
+            }   else if (rbtFar.isSelected())  {
+            
+                c = f - 32/9 *5;
+        }
+            //Saida
+            lblResultado.setText(String.valueOf(c));
+        }catch  (NumberFormatException  e){
+            JOptionPane.showMessageDialog(null,"Erro" + e.getMessage(),"Atenção!", JOptionPane.ERROR_MESSAGE);}
+            
+        
+    }//GEN-LAST:event_bntConverterActionPerformed
 
     /**
      * @param args the command line arguments
@@ -201,14 +242,15 @@ public class Conversor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JButton bntConverter;
+    private javax.swing.JButton bntLimpar;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JLabel lblResultado;
+    private javax.swing.JLabel lblTemperatura;
+    private javax.swing.JPanel pnlConversor;
+    private javax.swing.JPanel pnlOpções;
+    private javax.swing.JRadioButton rbtCelcos;
+    private javax.swing.JRadioButton rbtFar;
+    private javax.swing.JTextField txtNum1;
     // End of variables declaration//GEN-END:variables
 }
